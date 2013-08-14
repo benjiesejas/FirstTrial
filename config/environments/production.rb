@@ -1,4 +1,8 @@
 Blog::Application.configure do
+  group :production do
+    gem 'pg', '0.15.1'
+    gem 'rails_12factor', '0.0.2'
+  end
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
