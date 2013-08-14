@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
-
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development do
+	gem 'sqlite3'
+end
 
-gem 'sqlite3'
 gem "bcrypt-ruby", :require => "bcrypt"
 
 # Gems used only for assets and not required
